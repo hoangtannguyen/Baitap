@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Caculator:<br>
+    <input type = "text" id ="tt">
+    <input type = "text" id ="qq">
+    <br><br>
+    <button type="button" onclick="go()">Addition(+)</button>
+    <button type="button" onclick="go1()">Subtraction(-)</button>
+    <button type="button" onclick="go2()">Multiplication(X)</button>
+    <button type="button" onclick="go3()">Division(/)</button>
+    <div id="show"></div>
+    <script>
+        function go(){
+        let num1 = +document.getElementById("tt").value;
+        let num2 = +document.getElementById("qq").value;
+        let kq = num1 + num2;
+        document.getElementById("show").innerHTML=kq;
+        }   
+
+        function go1(){
+        let num1 = +document.getElementById("tt").value;
+        let num2 = +document.getElementById("qq").value;
+        let kq1 = num1 - num2;
+        document.getElementById("show").innerHTML=kq1;
+        }
+
+        function go2(){
+        let num1 = +document.getElementById("tt").value;
+        let num2 = +document.getElementById("qq").value;
+        let kq2 = num1 * num2;
+        document.getElementById("show").innerHTML=kq2;
+          }
+
+        function go3(){
+        let num1 = +document.getElementById("tt").value;
+        let num2 = +document.getElementById("qq").value;
+        let kq3 = num1 / num2;
+        document.getElementById("show").innerHTML=kq3;
+
+
+        }
+
+
+
+        
+    </script>
+
+
+
+</body>
+</html>

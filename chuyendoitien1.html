@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Amount:
+ <input type = "text" id="tt">
+<br><br>
+From Currency
+ <select id="from">
+<option value="vn">Việt Nam</option>
+<option value="usd">USD</option>
+ </select><br><br>
+
+ To Currency
+ <select style="background-color: aqua; height: 50px;" id="to">
+<option value="usd">USD</option>      
+<option value="vn">VietNam</option>
+ </select> <br><br>
+
+ <button type="button" onclick="go()">convert</button>
+ <div id="lo">
+
+ </div>
+ <script>
+ function go(){
+     let a = document.getElementById("from").value;
+     let b = document.getElementById("to").value;
+     let c = parseInt(document.getElementById("tt").value);
+
+     if ( a == "vn" && b == "usd"){
+         let kq = c /23000;
+         document.getElementById("lo").innerHTML="result: " + kq;
+     }
+
+     if ( a == "vn" && b=="vn"){
+         document.write("sai");
+     }
+
+     if ( a == "usd" &&  b == "vn"){
+          let kq1 = c * 23000;
+          document.getElementById("lo").innerHTML=kq1; }
+    if ( a == "usd" && b=="usd") {
+        document.write("sai");}
+
+ }
+ </script>
+</html>
